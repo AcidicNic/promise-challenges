@@ -1,4 +1,8 @@
 
+/**
+ * Live at https://nicc.io/promise-challenges/Promise-7/
+ */
+
 const latEle = document.getElementById('lat');
 const lonEle = document.getElementById('lon');
 const accuracyEle = document.getElementById('accuracy');
