@@ -28,7 +28,7 @@ function uppercaser(str) {
 // Notice how we chain these promises together. The 
 // Result of one is then passed to the next. 
 
-greet('Your name') // Returns a Promise
+greet('paris') // Returns a Promise
 .then(str => uppercaser(str))  // Upper case the results from greet() Returns a Promise
 .then(str => console.log(str)) // Log the results of uppercaser()
 .catch(err => console.log(err)) // Catches an error
@@ -36,8 +36,19 @@ greet('Your name') // Returns a Promise
 // Challenges: get greet() to fail by passing a non string value
 // What happens? 
 
+greet(123)
+.then(str => uppercaser(str))
+.then(str => console.log(str))
+.catch(err => console.log(err))
+
 // Challenge: get uppercaser() to fail by passing a non string value
 // What happens? 
 
+greet('kye')
+.then(str => uppercaser(123))
+.then(str => console.log(str))
+.catch(err => console.log(err))
+
 // Challenge: Notice there is only a single .catch() at the end. 
 // Explain the behavior?
+// '.catch()', catches any errors in the chain.
